@@ -1,0 +1,10 @@
+
+dotnet new mvc -o "nome do projeto"
+
+MySqlConnection con = new MySqlConnection("server=?; port=?; User Id=?; database=?; password=?");
+con.Open();
+
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.1.1
+
+dotnet ef migrations add "Initial"
+dotnet ef database update
